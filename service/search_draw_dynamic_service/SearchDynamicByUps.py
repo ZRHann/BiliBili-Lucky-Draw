@@ -150,7 +150,7 @@ class SearchDynamicByUps(object):
         for pathOne in pathOnes:
             if ElementUtil.is_xpath_exist(bro, chains,pathOne):
                 return pathOne
-        return None;
+        return None
 
     def dynLinks_to_db(self, dynLinks, source, note):
         cnt = 0
@@ -185,7 +185,7 @@ class SearchDynamicByUps(object):
         bro = None
         try:
             bro, chains = init_webdriver()
-            LoginService(bro, chains, self.user_id).login_by_cookie()
+            # LoginService(bro, chains, self.user_id).login_by_cookie()
             if "你的工具人老公" in globals.ups:
                 self.searchFromFiftyUps(bro, chains)
             if "_大锦鲤_" in globals.ups:

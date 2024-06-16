@@ -39,7 +39,10 @@ class BiliLinkShare(object):
         success_share_cnt = 0
         break_flag = 0
         try:
-            LoginService(self.bro, self.chains, self.user_id).login_by_cookie()
+            if globals.do_type == "login_manual":
+                LoginService(self.bro, self.chains, self.user_id).login_manual()
+            else:
+                LoginService(self.bro, self.chains, self.user_id).login_by_cookie2()
             datas = self.get_today_dynamic_links()
             ignore_links = self.get_ignore_link()
             for data in datas:

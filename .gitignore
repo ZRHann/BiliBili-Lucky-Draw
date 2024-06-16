@@ -1,6 +1,9 @@
 pyvenv
+venv
 .idea
 Log
+
+cookie/*
 
 
 __pycache__
